@@ -12,10 +12,12 @@ das Schul.net soll folgende Funktionen bieten:
 - - - Subbenutzer
 - Gruppen, in denen Benutzer Mitglieder sein können. 
 - ein Nachrichtenclient
+- Farbschemata
 - Standard-Nachrichten wie "Kind ist Krank", etc
 - - Namen sollen automatisch ausgefüllt werden, wenn der Benutzer die Einwilligung gegeben hat (OptOut).
 - Kalender
 - Nachrichtenportal für Nachrichten vom Dienstleister (a.k.a. der Schule)
+- Auch ein Forum oder ähnliches?
 - Downloadportal für Formulare und Dokumente
 - 
 
