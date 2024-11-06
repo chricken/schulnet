@@ -11,6 +11,7 @@ server.use(express.static('public', {
     extensions: ['html']
 }));
 
+server.use(express.json());
 server.use(router);
 
 const init = () => {

@@ -22,7 +22,38 @@ const db = {
         ).then(
             console.log
         )
-    }
+    },
+    checkLogin({ user = '', pwHash = '' }) {
+        let dbLogin = db.connection.use('schulnet_users');
+
+        return dbLogin.find({
+            selector: {
+                user
+            }
+        }).then(
+            res => {
+                if (res.docs.length) {
+                    let success = res.docs.some(doc => doc.password == pwHash);
+
+                    if (success) return {
+                        success: true
+                    }
+                    else return {
+                        success: false,
+                        msg: 'Wrong Password'
+                    }
+
+                } else {
+                    return {
+                        success: false,
+                        msg: 'User not found'
+                    }
+                }
+            }
+        ).catch(
+            console.warn
+        )
+    },
 }
 
 export default db;
