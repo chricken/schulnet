@@ -1,0 +1,6 @@
+.navLink {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+}

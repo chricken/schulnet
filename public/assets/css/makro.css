@@ -39,8 +39,12 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
 nav {
     background-color: transparent;
+}
+nav:empty {
+    display: none;
 }
 footer {
     background-color: #19284a;

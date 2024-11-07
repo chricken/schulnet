@@ -1,18 +1,31 @@
 'use strict';
 
 import dom from './dom.js';
+import render from './render.js';
+import {elements} from './settings.js';
+
+import dashboard from './components/dashboard.js'
+import mailclient from './components/mailclient.js';
+
+// Hier kommen nur einfache Komponenten hinein. 
+// Komplexere Komponenten sind eigene JS-Dateien im components-Ordner
 
 const components = {
+    dashboard,
+    mailclient,
+
     content({ content = '', parent = null }) {
         const elContainer = dom.create({
             parent,
             class: 'content'
         })
 
-        dom.create({
+        const elContent = dom.create({
             parent: elContainer,
             content,
         })
+
+        return elContent;
     },
     header({ content = '', parent = null }) {
         const elContainer = dom.create({
@@ -40,7 +53,8 @@ const components = {
             type: 'input',
             parent: elContainer,
             attr: {
-                type: password ? 'password' : 'text'
+                type: password ? 'password' : 'text',
+                value,
             },
             listeners: {
                 input(evt) {
@@ -62,6 +76,19 @@ const components = {
                 click: callback
             }
         })
+    },
+    navLink({ legend = '', module = '' }) {
+        const elLink = dom.create({
+            parent:elements.nav,
+            cssClassName:'navLink',
+            content:legend,
+            listeners:{
+                click(){
+                    render[module]()
+                }
+            }
+        })
+
     }
 
 }

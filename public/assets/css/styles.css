@@ -1,4 +1,5 @@
 @import './makro.css';
+@import './nav.css';
 
 nav ul {
     list-style: none;

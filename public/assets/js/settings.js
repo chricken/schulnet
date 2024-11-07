@@ -12,7 +12,14 @@ const settings = {
     },
     user:null,
     pwHash:null,
-    userType:null,
+    userTypes:{
+        admin:['dashboard', 'messages','calendar','news','downloads','user'],
+        lehrkraft:['dashboard', 'messages','calendar','news','downloads','user'],
+        eltern:['dashboard', 'messages','calendar','news','downloads','user'],
+        schueler:['dashboard', 'messages','user'],
+    },
+    lang:'de',
+    // lang:'en',
 }
 
 export default settings;

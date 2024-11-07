@@ -33,11 +33,14 @@ const db = {
         }).then(
             res => {
                 if (res.docs.length) {
-                    let success = res.docs.some(doc => doc.password == pwHash);
 
-                    if (success) return {
-                        success: true
+                    let user = res.docs.find(doc => doc.password == pwHash);
+
+                    if (user) return {
+                        success: true,
+                        user
                     }
+
                     else return {
                         success: false,
                         msg: 'Wrong Password'
