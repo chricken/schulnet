@@ -4,8 +4,8 @@ import dom from './dom.js';
 import render from './render.js';
 import {elements} from './settings.js';
 
-import dashboard from './components/dashboard.js'
-import mailclient from './components/mailclient.js';
+import dashboard from './views/dashboard.js'
+import mailclient from './views/mailclient.js';
 
 // Hier kommen nur einfache Komponenten hinein. 
 // Komplexere Komponenten sind eigene JS-Dateien im components-Ordner

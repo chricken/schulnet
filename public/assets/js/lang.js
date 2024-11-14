@@ -2,6 +2,7 @@
 
 const lang = {
     de:{
+        dashboard: 'Übersicht',
         username:'Benutzername',
         password: 'Passwort',
         login:'Anmelden',
@@ -12,6 +13,7 @@ const lang = {
         user:'Benutzer',
     },
     en:{
+        dashboard: 'Dashboard',
         username:'Username',
         password: 'Password',
         login:'Login',
